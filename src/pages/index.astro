@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout title="Home">
+	<Navbar />
+	<main>
+		<h1><center>The Goomba</center></h1>
+		<h2><img src="Goomba.png" alt="Goomba" width="150" height="150">
+		<button type="button" class="collapsible">WHAT: The basic design of our Goomba 
+		will center around three primary parts: the ev3 device, motors, and fan. These will function as our 
+		brain, movement, and vacuum container respectively. Using ball bearings in addition to wheels will allow 
+		us 360 motion in a stationary position, while also providing stability to the robot. Moreover, to indicate 
+		whether the goomba has interacted with a solid object, sensors will be attached to the front and back, each 
+		fitted with prongs that will prevent the robot from crashing. The fan will be located in the center of the 
+		goomba and inside a fixed container that leads to the dust collector. The collection process will work as 
+		the fan pushes air outside of the container, causing air to enter a small hole in the bottom of the robot 
+		in order to correct the shifted equilibrium. As a result, debris in the way of the moving air will be 
+		swept up into the collection container. </button><div class="content"><p>HOW: <br>
+		 We will begin by researching existing autonomous vacuum robots and their technologies 
+		to identify what works well and what can be improved upon. We will then design the overall structure and 
+		layout of the robot. The first step would be to import any necessary libraries and modules.
+		Next, we would need to create a loop that continuously updates the robot's position and sensor data
+		It's also important to code how to stop the robot when it encounters unexpected obstacles or when the 
+		battery is running low. We also have to code a map inside the robot so it can try to map out the room 
+		that it is cleaning by marking all the walls/obstacles in the room and drive accordingly.
+		 The code will trace the floor of the room, then force the robot to turn once a sensor detects an impact.
+		 A fully functional autonomous vacuum robot that can navigate and clean a designated area. 
+		A navigation system that allows the robot to avoid obstacles and efficiently clean the floor. A vacuum head 
+		attachment that can effectively pick up debris from the floor. 
+		<br> WHY: <br>This project will result in a practical and useful device that can help with household cleaning tasks. 
+		The autonomous vacuum robot will be able to navigate and clean a designated area, making it a valuable addition 
+		to any home. The development of this robot will also provide valuable experience in creating and programming 
+		autonomous systems. Hopefully, we can make the world a cleaner place.
+		</p></div></h2>
+	</main>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 5rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	h2 {
+		font-size: 1rem;
+		font-weight: 500;
+		background-color: white;
+		height: 150px;
+		width: 100%;
+		border-radius: 12px;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	img {
+		border-radius: 12px;
+	}
+    .collapsible {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        width: 87%;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+		position: absolute;
+		border: 4px;
+		border-radius: 12px;
+    }
+    .active, .collapsible:hover {
+        background-color: white;
+    }
+    .content {
+        padding: 2px 18px;
+        display:contents
+        overflow: hidden;
+        background-color: white;
+		border-radius: 12px;
+    }
+</style>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+		
+for (i = 0; i <= coll.length; i++) {
+	coll[i].addEventListener("click", function() {
+	this.classList.toggle("active");
+	var content = this.nextElementSibling;
+	if (content.style.display === "block") {
+		content.style.display = "none";
+	} else {
+		content.style.display = "block";
+	}
+})
+};
+</script>
+
+<!--span class="text-gradient">Home Test</span-->
